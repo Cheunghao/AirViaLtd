@@ -50,8 +50,12 @@ public class OfficeManagerHomeController {
     }
 
     @FXML
-    void ticketButtonClick(ActionEvent event) {
-
+    void ticketButtonClick(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Main.class.getResource("UniversalTickets.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

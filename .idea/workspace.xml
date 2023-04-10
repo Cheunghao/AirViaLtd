@@ -4,30 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="another commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/MySQLConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerHomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Tickets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/UniversalHomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/UniversalTicketsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/MenuTemplate.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/temp.fxml" afterDir="false" />
+    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="revamping gui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/AddTicketController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/AdministratorController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/ViewTransactionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/AddTicket.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/AdministratorMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/UniversalHome.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/Home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/UniversalTickets.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisorMenu.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/ViewTransaction.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerHome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Tickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Tickets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/UniversalTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/UniversalTicketsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/UniversalTickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/UniversalTickets.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/temp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/temp.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +108,7 @@
       <workItem from="1680891932960" duration="1073000" />
       <workItem from="1680893301626" duration="6716000" />
       <workItem from="1681127377920" duration="603000" />
-      <workItem from="1681144480522" duration="4762000" />
+      <workItem from="1681144480522" duration="8408000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1680724215592</created>
@@ -139,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680819852937</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="revamping gui">
+      <created>1681163327140</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681163327140</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +140,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="another commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="another commit" />
+    <MESSAGE value="revamping gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="revamping gui" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
