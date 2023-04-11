@@ -41,13 +41,13 @@ public class LoginController {
 
         // sql statement to decide which type of employee has logged in then does this
 
-        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManagerHome.fxml"));
+        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManager.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
 
-        try {
+        /*try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://smcse-stuproj00.city.ac.uk/in2018g22", "in2018g22_a", "dM8Sf9EB");
             System.out.println("Connected");
@@ -56,7 +56,7 @@ public class LoginController {
         } catch (Exception e) {
             System.out.println("Connection Error");
             e.printStackTrace();
-        }
+        }*/
 
     }
 

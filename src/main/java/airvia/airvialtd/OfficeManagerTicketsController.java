@@ -5,10 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
@@ -19,10 +16,19 @@ import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 
-public class UniversalTicketsController implements Initializable {
+public class OfficeManagerTicketsController implements Initializable {
 
 
     Connection connection;
+    ResultSet rs;
+
+
+
+    @FXML
+    private Label totalProfitsLabel;
+
+    @FXML
+    private Label totalTicketsLabel;
 
     @FXML
     private Button addTicketButton;
@@ -80,40 +86,9 @@ public class UniversalTicketsController implements Initializable {
 
     }
 
-    @FXML
-    void searchButtonClick(ActionEvent event) {
+    public void displayTable() {
         ObservableList<Tickets> ticketList = FXCollections.observableArrayList();
 
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://smcse-stuproj00.city.ac.uk/in2018g22", "in2018g22_a", "dM8Sf9EB");
-            System.out.println("Connected");
-
-            PreparedStatement pst = connection.prepareStatement("select * from Ticket where ticket_ID like '%" + searchTextField.getText() + "%'");
-            ResultSet rs = pst.executeQuery();
-            while(rs.next()) {
-                Integer ticketID = rs.getInt("ticket_ID");
-                String valid = rs.getString("validity_status");
-                java.sql.Timestamp timestamp = rs.getTimestamp("purchase_date");
-                java.util.Date date = new java.util.Date(timestamp.getTime());
-                String formattedDate = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss").format(date);
-                String paymentType = rs.getString("payment_type");
-                Float paymentTotal = rs.getFloat("payment_total");
-                Integer currencyID = rs.getInt("currency_id");
-                Integer blankID = rs.getInt("blank_id");
-                String refundStatus = rs.getString("refund_status");
-
-                ticketList.add(new Tickets(ticketID, valid, formattedDate, paymentType, paymentTotal, currencyID, blankID, refundStatus));
-            }
-
-        } catch (Exception e) {
-            System.out.println("Error");
-            e.printStackTrace();
-        }
-        ticketTable.setItems(ticketList);
-    }
-
-    public void initialize(URL url, ResourceBundle rb) {
 
         colTicketID.setCellValueFactory(new PropertyValueFactory<>("ticketID"));
         ticketTable.getColumns().add(colTicketID);
@@ -131,8 +106,71 @@ public class UniversalTicketsController implements Initializable {
         ticketTable.getColumns().add(colBlankID);
         colRefundStatus.setCellValueFactory(new PropertyValueFactory<>("refundStatus"));
         ticketTable.getColumns().add(colRefundStatus);
+        try {
+            PreparedStatement pst = connection.prepareStatement("select * from Ticket where ticket_ID like '%" + searchTextField.getText() + "%'");
+            rs = pst.executeQuery();
+            while(rs.next()) {
+                Integer ticketID = rs.getInt("ticket_ID");
+                String valid = rs.getString("validity_status");
+                java.sql.Timestamp timestamp = rs.getTimestamp("purchase_date");
+                java.util.Date date = new java.util.Date(timestamp.getTime());
+                String formattedDate = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss").format(date);
+                String paymentType = rs.getString("payment_type");
+                Float paymentTotal = rs.getFloat("payment_total");
+                Integer currencyID = rs.getInt("currency_id");
+                Integer blankID = rs.getInt("blank_id");
+                String refundStatus = rs.getString("refund_status");
+
+                ticketList.add(new Tickets(ticketID, valid, formattedDate, paymentType, paymentTotal, currencyID, blankID, refundStatus));
+            }
+        } catch (Exception e) {
+            System.out.println("Error");
+            e.printStackTrace();
+        }
+        ticketTable.setItems(ticketList);
+    }
+
+    public void connectToDatabase() {
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection("jdbc:mysql://smcse-stuproj00.city.ac.uk/in2018g22", "in2018g22_a", "dM8Sf9EB");
+            System.out.println("Connected");
+        } catch (Exception e) {
+            System.out.println("connection error");
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void searchButtonClick(ActionEvent event) {
+        displayTable();
+    }
+
+    public String getTotalTickets() {
+        int total = 0;
+        try {
+            PreparedStatement pst = connection.prepareStatement("select * from Ticket");
+            rs = pst.executeQuery();
+
+            while (rs.next()) {
+                System.out.println("something");
+                total++;
+            }
+        } catch (Exception e) {
+            System.out.println("total ticket error");
+            e.printStackTrace();
+        }
+        System.out.println(total);
+        return String.valueOf(total);
+    }
+
+    public void initialize(URL url, ResourceBundle rb) {
+        System.out.println("connect");
+        connectToDatabase();
 
 
+        totalTicketsLabel.setText(getTotalTickets());
     }
 
 }
