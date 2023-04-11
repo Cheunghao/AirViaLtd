@@ -2,96 +2,72 @@ package airvia.airvialtd;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class TravelAdvisorController {
 
-    @FXML
-    private AnchorPane ClientPane;
+    private Stage stage;
+    private Scene scene;
 
     @FXML
-    private AnchorPane HomePane;
+    private Button clientButton;
 
     @FXML
-    private Rectangle RectangleBlock;
+    private Button homeButton;
 
     @FXML
-    private AnchorPane ReportSalesPane;
+    private Button reportButton;
 
     @FXML
-    private AnchorPane SettingPane;
+    private Button settingButton;
 
     @FXML
-    private AnchorPane TicketPane;
+    private Button ticketButton;
 
     @FXML
-    private Button btnClient;
-
-    @FXML
-    private Button btnHome;
-
-    @FXML
-    private Button btnReportSales;
-
-    @FXML
-    private Button btnSetting;
-
-    @FXML
-    private Button btnTicket;
-
-    @FXML
-    void ClientOnClick(ActionEvent event) {
-        RectangleBlock.setVisible(false);
-        ClientPane.setVisible(true);
-        ReportSalesPane.setVisible(false);
-        SettingPane.setVisible(false);
-        HomePane.setVisible(false);
-        TicketPane.setVisible(false);
-    }
-
-    @FXML
-    void ReportSalesOnClick(ActionEvent event) {
-        RectangleBlock.setVisible(false);
-        ClientPane.setVisible(false);
-        ReportSalesPane.setVisible(true);
-        SettingPane.setVisible(false);
-        HomePane.setVisible(false);
-        TicketPane.setVisible(false);
+    void clientButtonClick(ActionEvent event) {
 
     }
 
     @FXML
-    void SettingOnClick(ActionEvent event) {
-        RectangleBlock.setVisible(false);
-        ClientPane.setVisible(false);
-        ReportSalesPane.setVisible(false);
-        SettingPane.setVisible(true);
-        HomePane.setVisible(false);
-        TicketPane.setVisible(false);
+    void homeButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource("TravelAdvisorHome.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
     @FXML
-    void homeOnClick(ActionEvent event) {
-        RectangleBlock.setVisible(false);
-        ClientPane.setVisible(false);
-        ReportSalesPane.setVisible(false);
-        SettingPane.setVisible(false);
-        HomePane.setVisible(true);
-        TicketPane.setVisible(false);
+    void reportButtonClick(ActionEvent event) {
 
     }
 
     @FXML
-    void ticketOnClick(ActionEvent event) {
-        RectangleBlock.setVisible(false);
-        ClientPane.setVisible(false);
-        ReportSalesPane.setVisible(false);
-        SettingPane.setVisible(false);
-        HomePane.setVisible(false);
-        TicketPane.setVisible(true);
+    void settingButtonClick(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Main.class.getResource("TravelAdvisorSetting.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    @FXML
+    void ticketButtonClick(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Main.class.getResource("TravelAdvisorTickets.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
