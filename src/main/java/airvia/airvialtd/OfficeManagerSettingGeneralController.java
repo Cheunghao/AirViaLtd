@@ -11,28 +11,34 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class OfficeManagerController {
-
+public class OfficeManagerSettingGeneralController {
     private Stage stage;
     private Scene scene;
-    @FXML
-    private Button blanksButton;
 
     @FXML
-    private Button settingButton;
+    private Button backButton;
 
     @FXML
-    private Button homeButton;
+    private Button generalButton;
 
     @FXML
-    private Button reportButton;
+    private Button securityButton;
 
     @FXML
-    private Button ticketButton;
+    private Button updateButton;
 
     @FXML
-    void settingButtonClick(ActionEvent event) throws IOException{
+    void backButtonClick(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManager.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
+    }
+
+    @FXML
+    void generalButtonClick(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(Main.class.getResource("OfficeManagerSettingGeneral.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -42,9 +48,8 @@ public class OfficeManagerController {
     }
 
     @FXML
-    void homeButtonClick(ActionEvent event) throws IOException {
-
-        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManagerHome.fxml"));
+    void securityButtonClick(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManagerSettingSecurity.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -53,27 +58,13 @@ public class OfficeManagerController {
     }
 
     @FXML
-    void blankButtonClick(ActionEvent event) throws IOException {
-
-        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManagerBlanks.fxml"));
+    void updateButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManagerSettingUpdate.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
 
-    @FXML
-    void reportButtonClick(ActionEvent event) {
-
-    }
-
-    @FXML
-    void ticketButtonClick(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManagerTickets.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
 
 }

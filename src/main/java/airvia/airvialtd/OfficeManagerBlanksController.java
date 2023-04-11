@@ -4,10 +4,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,8 +22,11 @@ import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 public class OfficeManagerBlanksController implements Initializable {
-    Connection connection;
-    ResultSet rs;
+    private Connection connection;
+    private ResultSet rs;
+    private Stage stage;
+    private Scene scene;
+
 
     @FXML
     private Button assignBlankButton;
@@ -72,7 +81,12 @@ public class OfficeManagerBlanksController implements Initializable {
     }
 
     @FXML
-    void backButton(ActionEvent event) {
+    void backButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManager.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
@@ -95,22 +109,6 @@ public class OfficeManagerBlanksController implements Initializable {
     public void displayTable() {
         ObservableList<Blanks> blankList = FXCollections.observableArrayList();
 
-        colBlankID.setCellValueFactory(new PropertyValueFactory<>("blankID"));
-        blankTable.getColumns().add(colBlankID);
-        colBlankType.setCellValueFactory(new PropertyValueFactory<>("blankType"));
-        blankTable.getColumns().add(colBlankType);
-        colBlankNumber.setCellValueFactory(new PropertyValueFactory<>("blankNumber"));
-        blankTable.getColumns().add(colBlankNumber);
-        colAirlineName.setCellValueFactory(new PropertyValueFactory<>("airlineName"));
-        blankTable.getColumns().add(colAirlineName);
-        colAuditorsCoupons.setCellValueFactory(new PropertyValueFactory<>("auditorsCoupons"));
-        blankTable.getColumns().add(colAuditorsCoupons);
-        colFlightCoupon.setCellValueFactory(new PropertyValueFactory<>("flightCoupon"));
-        blankTable.getColumns().add(colFlightCoupon);
-        colTravelAdvisorID.setCellValueFactory(new PropertyValueFactory<>("travelAdvisorID"));
-        blankTable.getColumns().add(colTravelAdvisorID);
-        colSysadminID.setCellValueFactory(new PropertyValueFactory<>("sysadminID"));
-        blankTable.getColumns().add(colSysadminID);
         try {
             PreparedStatement pst = connection.prepareStatement("select * from Blank where blank_id like '%" + searchTextField.getText() + "%'");
             rs = pst.executeQuery();
@@ -148,6 +146,23 @@ public class OfficeManagerBlanksController implements Initializable {
         System.out.println("connect");
         connectToDatabase();
 
+
+        colBlankID.setCellValueFactory(new PropertyValueFactory<>("blankID"));
+        blankTable.getColumns().add(colBlankID);
+        colBlankType.setCellValueFactory(new PropertyValueFactory<>("blankType"));
+        blankTable.getColumns().add(colBlankType);
+        colBlankNumber.setCellValueFactory(new PropertyValueFactory<>("blankNumber"));
+        blankTable.getColumns().add(colBlankNumber);
+        colAirlineName.setCellValueFactory(new PropertyValueFactory<>("airlineName"));
+        blankTable.getColumns().add(colAirlineName);
+        colAuditorsCoupons.setCellValueFactory(new PropertyValueFactory<>("auditorsCoupons"));
+        blankTable.getColumns().add(colAuditorsCoupons);
+        colFlightCoupon.setCellValueFactory(new PropertyValueFactory<>("flightCoupon"));
+        blankTable.getColumns().add(colFlightCoupon);
+        colTravelAdvisorID.setCellValueFactory(new PropertyValueFactory<>("travelAdvisorID"));
+        blankTable.getColumns().add(colTravelAdvisorID);
+        colSysadminID.setCellValueFactory(new PropertyValueFactory<>("sysadminID"));
+        blankTable.getColumns().add(colSysadminID);
     }
 
 }

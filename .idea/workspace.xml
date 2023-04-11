@@ -4,22 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="ticket commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Blanks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerBlanksController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManager.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerBlanks.fxml" afterDir="false" />
+    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="blanks commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerSettingGeneralController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerSettingSecurityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerSettingUpdateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerSettingGeneral.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerSettingSecurity.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerSettingUpdate.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerBlanksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerBlanksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/UniversalHomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/UniversalTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerTicketsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerTicketsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerBlanks.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerBlanks.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerHome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerHome.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/UniversalHome.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/UniversalTickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerTickets.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerTickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerTickets.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,7 @@
       <workItem from="1680891932960" duration="1073000" />
       <workItem from="1680893301626" duration="6716000" />
       <workItem from="1681127377920" duration="603000" />
-      <workItem from="1681144480522" duration="15625000" />
+      <workItem from="1681144480522" duration="19622000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1680724215592</created>
@@ -145,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681166787501</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="blanks commit">
+      <created>1681215849840</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681215849840</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +162,19 @@
     <MESSAGE value="another commit" />
     <MESSAGE value="revamping gui" />
     <MESSAGE value="ticket commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="ticket commit" />
+    <MESSAGE value="blanks commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="blanks commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

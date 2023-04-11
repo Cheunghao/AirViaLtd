@@ -4,10 +4,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,8 +25,10 @@ import java.util.ResourceBundle;
 public class OfficeManagerTicketsController implements Initializable {
 
 
-    Connection connection;
-    ResultSet rs;
+    private Connection connection;
+    private ResultSet rs;
+    private Stage stage;
+    private Scene scene;
 
 
 
@@ -77,7 +85,12 @@ public class OfficeManagerTicketsController implements Initializable {
     }
 
     @FXML
-    void backButton(ActionEvent event) {
+    void backButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManager.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
@@ -90,22 +103,7 @@ public class OfficeManagerTicketsController implements Initializable {
         ObservableList<Tickets> ticketList = FXCollections.observableArrayList();
 
 
-        colTicketID.setCellValueFactory(new PropertyValueFactory<>("ticketID"));
-        ticketTable.getColumns().add(colTicketID);
-        colValidityStatus.setCellValueFactory(new PropertyValueFactory<>("validityStatus"));
-        ticketTable.getColumns().add(colValidityStatus);
-        colPurchaseDate.setCellValueFactory(new PropertyValueFactory<>("purchaseDate"));
-        ticketTable.getColumns().add(colPurchaseDate);
-        colPaymentType.setCellValueFactory(new PropertyValueFactory<>("paymentType"));
-        ticketTable.getColumns().add(colPaymentType);
-        colPaymentTotal.setCellValueFactory(new PropertyValueFactory<>("paymentTotal"));
-        ticketTable.getColumns().add(colPaymentTotal);
-        colCurrencyID.setCellValueFactory(new PropertyValueFactory<>("currencyID"));
-        ticketTable.getColumns().add(colCurrencyID);
-        colBlankID.setCellValueFactory(new PropertyValueFactory<>("blankID"));
-        ticketTable.getColumns().add(colBlankID);
-        colRefundStatus.setCellValueFactory(new PropertyValueFactory<>("refundStatus"));
-        ticketTable.getColumns().add(colRefundStatus);
+
         try {
             PreparedStatement pst = connection.prepareStatement("select * from Ticket where ticket_ID like '%" + searchTextField.getText() + "%'");
             rs = pst.executeQuery();
@@ -168,6 +166,23 @@ public class OfficeManagerTicketsController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         System.out.println("connect");
         connectToDatabase();
+
+        colTicketID.setCellValueFactory(new PropertyValueFactory<>("ticketID"));
+        ticketTable.getColumns().add(colTicketID);
+        colValidityStatus.setCellValueFactory(new PropertyValueFactory<>("validityStatus"));
+        ticketTable.getColumns().add(colValidityStatus);
+        colPurchaseDate.setCellValueFactory(new PropertyValueFactory<>("purchaseDate"));
+        ticketTable.getColumns().add(colPurchaseDate);
+        colPaymentType.setCellValueFactory(new PropertyValueFactory<>("paymentType"));
+        ticketTable.getColumns().add(colPaymentType);
+        colPaymentTotal.setCellValueFactory(new PropertyValueFactory<>("paymentTotal"));
+        ticketTable.getColumns().add(colPaymentTotal);
+        colCurrencyID.setCellValueFactory(new PropertyValueFactory<>("currencyID"));
+        ticketTable.getColumns().add(colCurrencyID);
+        colBlankID.setCellValueFactory(new PropertyValueFactory<>("blankID"));
+        ticketTable.getColumns().add(colBlankID);
+        colRefundStatus.setCellValueFactory(new PropertyValueFactory<>("refundStatus"));
+        ticketTable.getColumns().add(colRefundStatus);
 
 
         totalTicketsLabel.setText(getTotalTickets());

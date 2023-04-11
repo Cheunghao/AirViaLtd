@@ -69,7 +69,7 @@
         </font>
     </Button>
     <TableView fx:id="ticketTable" layoutX="150.0" layoutY="138.0" prefHeight="111.0" prefWidth="565.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="138.0" />
-   <Button fx:id="backButton" layoutX="15.0" layoutY="359.0" mnemonicParsing="false" onAction="#backButton" text="Back">
+   <Button fx:id="backButton" layoutX="15.0" layoutY="359.0" mnemonicParsing="false" onAction="#backButtonClick" text="Back">
       <font>
          <Font name="Comic Sans MS" size="12.0" />
       </font>
