@@ -142,7 +142,7 @@ public class OfficeManagerReportsController implements Initializable {
         reportTable.getColumns().add(colPaymentType);
         colFlightType.setCellValueFactory(new PropertyValueFactory<>("flightType"));
         reportTable.getColumns().add(colFlightType);
-        colCommissionRate.setCellValueFactory(new PropertyValueFactory<>("comissionRate"));
+        colCommissionRate.setCellValueFactory(new PropertyValueFactory<>("commissionRate"));
         reportTable.getColumns().add(colCommissionRate);
         colSaleTotal.setCellValueFactory(new PropertyValueFactory<>("saleTotal"));
         reportTable.getColumns().add(colSaleTotal);
