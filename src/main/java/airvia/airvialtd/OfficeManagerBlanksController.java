@@ -19,6 +19,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class OfficeManagerBlanksController implements Initializable {
@@ -91,13 +93,68 @@ public class OfficeManagerBlanksController implements Initializable {
     }
 
     @FXML
-    void createBlankClick(ActionEvent event) {
+    void createBlankClick(ActionEvent event) throws IOException {
+        try {
+            System.out.println("buttonclick");
 
+            Parent root = FXMLLoader.load(Main.class.getResource("CreateBlank.fxml"));
+            Stage newStage = new Stage();
+            Scene newScene = new Scene(root);
+            newStage.setScene(newScene);
+            newStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void removeBlankButton(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText("Are you sure you want to perform this action?");
 
+        Optional<ButtonType> result = alert.showAndWait();
+        int ticket;
+
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            PreparedStatement pst;
+            try {
+                if (Objects.equals(searchTextField.getText(), "")) {
+                } else {
+
+                    pst = connection.prepareStatement("select * from Ticket where blank_id = "+ searchTextField.getText());
+                    rs = pst.executeQuery();
+                     while(rs.next()) {
+
+                        ticket = rs.getInt(1);
+
+                        pst = connection.prepareStatement("DELETE FROM Refund where ticket_ID = " + ticket);
+                        pst.executeUpdate();
+                        pst = connection.prepareStatement("DELETE FROM Customer where ticket_ID = " + ticket);
+                        pst.executeUpdate();
+                        pst = connection.prepareStatement("DELETE FROM SaleInfo where ticket_ID = " + ticket);
+                        pst.executeUpdate();
+                        pst = connection.prepareStatement("DELETE FROM Ticket where ticket_ID = " + ticket);
+                        pst.executeUpdate();
+                    }
+                    pst = connection.prepareStatement("select * from Blank where blank_id =" +searchTextField.getText());
+                    rs = pst.executeQuery();
+
+                    rs.next();
+
+                    ticket = rs.getInt(1);
+                    pst = connection.prepareStatement("DELETE FROM Blank where blank_id = " + ticket);
+                    pst.executeUpdate();
+                }
+
+
+
+            } catch (Exception e) {
+                System.out.println("Error");
+                e.printStackTrace();
+            }
+        } else {
+        }
     }
 
     @FXML

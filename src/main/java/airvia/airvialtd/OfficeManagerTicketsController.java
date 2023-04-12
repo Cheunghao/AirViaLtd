@@ -20,6 +20,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class OfficeManagerTicketsController implements Initializable {
@@ -81,7 +83,6 @@ public class OfficeManagerTicketsController implements Initializable {
 
     @FXML
     void addTicketButton(ActionEvent event) throws IOException{
-        System.out.println("add ticket button");
         Parent root = FXMLLoader.load(Main.class.getResource("AddTickets.fxml"));
         Stage newStage = new Stage();
         Scene newScene = new Scene(root);
@@ -102,6 +103,43 @@ public class OfficeManagerTicketsController implements Initializable {
 
     @FXML
     void removeTicketButton(ActionEvent event) {
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText("Are you sure you want to perform this action?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        int ticket;
+
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            PreparedStatement pst;
+            try {
+                if (Objects.equals(searchTextField.getText(), "")) {
+                    System.out.println("empty");
+                    pst = connection.prepareStatement("select MIN(ticket_ID) from Ticket ");
+                    rs = pst.executeQuery();
+                    rs.next();
+                    ticket = rs.getInt(1);
+                } else {
+                    ticket = Integer.parseInt(searchTextField.getText());
+                }
+
+                pst = connection.prepareStatement("DELETE FROM Refund where ticket_ID = "+ ticket);
+                pst.executeUpdate();
+                pst = connection.prepareStatement("DELETE FROM Customer where ticket_ID = "+ ticket);
+                pst.executeUpdate();
+                pst = connection.prepareStatement("DELETE FROM SaleInfo where ticket_ID = "+ ticket);
+                pst.executeUpdate();
+                pst = connection.prepareStatement("DELETE FROM Ticket where ticket_ID = " + ticket);
+                pst.executeUpdate();
+
+            } catch (Exception e) {
+                System.out.println("Error");
+                e.printStackTrace();
+            }
+        } else {
+        }
+
 
     }
 

@@ -81,7 +81,12 @@ public class TravelAdvisorTicketsController implements Initializable {
     private Button viewTransactionButton;
 
     @FXML
-    void addTicketButton(ActionEvent event) {
+    void addTicketButton(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Main.class.getResource("AddTickets.fxml"));
+        Stage newStage = new Stage();
+        Scene newScene = new Scene(root);
+        newStage.setScene(newScene);
+        newStage.show();
 
     }
 

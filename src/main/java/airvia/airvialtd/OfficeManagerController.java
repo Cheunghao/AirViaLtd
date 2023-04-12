@@ -63,7 +63,12 @@ public class OfficeManagerController {
     }
 
     @FXML
-    void reportButtonClick(ActionEvent event) {
+    void reportButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManagerReports.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 

@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="add tickets">
+    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="login">
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateBlankController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerReportsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Reports.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/CreateBlank.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerReports.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerBlanksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerBlanksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerTicketsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorTicketsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -103,7 +110,7 @@
       <workItem from="1680891932960" duration="1073000" />
       <workItem from="1680893301626" duration="6716000" />
       <workItem from="1681127377920" duration="603000" />
-      <workItem from="1681144480522" duration="42407000" />
+      <workItem from="1681144480522" duration="57238000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1680724215592</created>
@@ -161,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681305970931</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="login">
+      <created>1681309871101</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681309871101</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +190,8 @@
     <MESSAGE value="workng back" />
     <MESSAGE value="traveladvisor 50%" />
     <MESSAGE value="add tickets" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tickets" />
+    <MESSAGE value="login" />
+    <option name="LAST_COMMIT_MESSAGE" value="login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
