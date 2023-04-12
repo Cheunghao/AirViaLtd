@@ -80,7 +80,13 @@ public class OfficeManagerTicketsController implements Initializable {
     private Button viewTransactionButton;
 
     @FXML
-    void addTicketButton(ActionEvent event) {
+    void addTicketButton(ActionEvent event) throws IOException{
+        System.out.println("add ticket button");
+        Parent root = FXMLLoader.load(Main.class.getResource("AddTickets.fxml"));
+        Stage newStage = new Stage();
+        Scene newScene = new Scene(root);
+        newStage.setScene(newScene);
+        newStage.show();
 
     }
 
@@ -95,7 +101,7 @@ public class OfficeManagerTicketsController implements Initializable {
     }
 
     @FXML
-    void removeRicketButton(ActionEvent event) {
+    void removeTicketButton(ActionEvent event) {
 
     }
 

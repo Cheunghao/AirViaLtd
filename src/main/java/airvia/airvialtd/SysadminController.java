@@ -11,13 +11,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class TravelAdvisorController {
+public class SysadminController {
 
     private Stage stage;
     private Scene scene;
-
-    @FXML
-    private Button clientButton;
 
     @FXML
     private Button homeButton;
@@ -29,21 +26,14 @@ public class TravelAdvisorController {
     private Button settingButton;
 
     @FXML
-    private Button ticketButton;
+    private Button stockButton;
 
     @FXML
-    void clientButtonClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Main.class.getResource("TravelAdvisorCustomers.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-    }
+    private Button userAccountButton;
 
     @FXML
     void homeButtonClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Main.class.getResource("TravelAdvisorHome.fxml"));
+        Parent root = FXMLLoader.load(Main.class.getResource(".fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -57,8 +47,8 @@ public class TravelAdvisorController {
     }
 
     @FXML
-    void settingButtonClick(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(Main.class.getResource("TravelAdvisorSettingGeneral.fxml"));
+    void settingButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource(".fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -67,8 +57,18 @@ public class TravelAdvisorController {
     }
 
     @FXML
-    void ticketButtonClick(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(Main.class.getResource("TravelAdvisorTickets.fxml"));
+    void stockButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource(".fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    @FXML
+    void userAccountButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource(".fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

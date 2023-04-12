@@ -4,23 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="workng back">
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorHomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorSettingGeneralController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorSettingSecurityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorSettingUpdateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorTicketsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisorHome.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisorSettingGeneral.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisorSettingSecurity.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisorTickets.fxml" afterDir="false" />
+    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="traveladvisor 50%">
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/AddTicketsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Customers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminHomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminStockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorCustomersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/AddTickets.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/Sysadmin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/SysadminHome.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/SysadminStock.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisorCustomers.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Tickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Tickets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerTicketsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerHome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerHome.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorTicketsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerSettingGeneral.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerSettingGeneral.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerTickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerTickets.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -116,7 +118,7 @@
       <workItem from="1680891932960" duration="1073000" />
       <workItem from="1680893301626" duration="6716000" />
       <workItem from="1681127377920" duration="603000" />
-      <workItem from="1681144480522" duration="23671000" />
+      <workItem from="1681144480522" duration="39065000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1680724215592</created>
@@ -160,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681221082586</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="traveladvisor 50%">
+      <created>1681225138478</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681225138478</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +182,8 @@
     <MESSAGE value="ticket commit" />
     <MESSAGE value="blanks commit" />
     <MESSAGE value="workng back" />
-    <option name="LAST_COMMIT_MESSAGE" value="workng back" />
+    <MESSAGE value="traveladvisor 50%" />
+    <option name="LAST_COMMIT_MESSAGE" value="traveladvisor 50%" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

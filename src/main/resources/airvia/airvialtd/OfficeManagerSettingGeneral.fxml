@@ -47,12 +47,18 @@
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="60.0" layoutY="214.0" text="Language">
+      <Label layoutX="59.0" layoutY="214.0" text="Language">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
       <ChoiceBox layoutX="167.0" layoutY="178.0" prefWidth="150.0" />
       <ChoiceBox layoutX="167.0" layoutY="211.0" prefWidth="150.0" />
+      <Label layoutX="59.0" layoutY="246.0" text="Currency">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </Label>
+      <ChoiceBox layoutX="167.0" layoutY="243.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
