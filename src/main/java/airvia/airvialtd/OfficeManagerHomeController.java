@@ -10,7 +10,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * The OfficeManagerHomeController class is the controller class for the Office Manager Home UI.
+ */
 public class OfficeManagerHomeController {
     private Stage stage;
     private Scene scene;

@@ -225,8 +225,6 @@ public class OfficeManagerBlanksController implements Initializable {
      *
      * Attempts to connect to a MySQL database using the JDBC driver and the provided credentials.
      * The connection object is stored in the instance variable 'connection'.
-     * @throws ClassNotFoundException if the JDBC driver class cannot be found
-     * @throws SQLException if there is an error with the SQL syntax or connection
      */
     public void connectToDatabase() {
         try {

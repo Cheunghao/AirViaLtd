@@ -19,7 +19,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
-
+/**
+ * The CreateReportTravelAgencyController class is responsible for managing the user interface and
+ * processing user input related to creating a new travel report.
+ * This class implements the Initializable interface, which allows it to perform initialization
+ * tasks when the corresponding user interface is loaded.
+ */
 public class CreateReportTravelAgencyController implements Initializable {
     private Connection connection;
     private String paymentType, flightType, commissionRate, saleTotal, currencyID, travelAdvisorID, ticketID, taxPercentage, taxValue, date;

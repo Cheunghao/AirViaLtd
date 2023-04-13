@@ -20,6 +20,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
+
+/**
+ * The OfficeManagerReportsController class is the controller class for the Office Manager Home UI.
+ * It handles user input and updates the UI accordingly, as well as communicating with the back-end server to retrieve and update data.
+ *
+ * This class also implements the Initializable interface, which provides a method for initializing the controller after its
+ * root element has been loaded.
+ */
 public class OfficeManagerReportsController implements Initializable {
     private Connection connection;
     private Stage stage;

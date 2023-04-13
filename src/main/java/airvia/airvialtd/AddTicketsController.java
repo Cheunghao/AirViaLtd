@@ -12,7 +12,10 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Objects;
-
+/**
+ * The AddTicketsController class is responsible for managing the user interface and
+ * processing user input related to adding new tickets to a ticketing system.
+ */
 public class AddTicketsController {
     private Connection connection;
     private String validityStatus, purchaseDate, paymentType, paymentTotal, currencyID, blankID, refundStatus;
@@ -153,8 +156,6 @@ public class AddTicketsController {
      *
      * Attempts to connect to a MySQL database using the JDBC driver and the provided credentials.
      * The connection object is stored in the instance variable 'connection'.
-     * @throws ClassNotFoundException if the JDBC driver class cannot be found
-     * @throws Exception if there is an error with the SQL syntax or connection
      */
     public void connectToDatabase() {
         try {

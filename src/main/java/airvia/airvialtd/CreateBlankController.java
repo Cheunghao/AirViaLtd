@@ -11,11 +11,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
-import java.util.Objects;
-
+/**
+ * The CreateBlankController class is responsible for managing the user interface and
+ * processing user input related to creating a new blank ticket in a ticketing system.
+ */
 public class CreateBlankController {
     private Connection connection;
 
@@ -131,8 +130,6 @@ public class CreateBlankController {
      *
      * Attempts to connect to a MySQL database using the JDBC driver and the provided credentials.
      * The connection object is stored in the instance variable 'connection'.
-     * @throws ClassNotFoundException if the JDBC driver class cannot be found
-     * @throws Exception if there is an error with the SQL syntax or connection
      */
     public void connectToDatabase() {
         try {

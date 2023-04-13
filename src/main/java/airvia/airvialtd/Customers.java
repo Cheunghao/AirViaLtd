@@ -1,5 +1,8 @@
 package airvia.airvialtd;
-
+/**
+ * The Customers class represents a collection of customers.
+ * It provides methods for adding, retrieving customer information.
+ */
 public class Customers {
     public Customers(Integer customerID, String firstName, String surname, String email, String number, String valuedCustomer, Integer ticketID) {
         this.customerID = customerID;

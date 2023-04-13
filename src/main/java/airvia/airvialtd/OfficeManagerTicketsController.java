@@ -23,7 +23,13 @@ import java.text.SimpleDateFormat;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
+/**
+ * The OfficeManagerTicketsController class is the controller class for the Office Manager Tickets UI.
+ * It handles user input and updates the UI accordingly, as well as communicating with the back-end server to retrieve and update data.
+ *
+ * This class also implements the Initializable interface, which provides a method for initializing the controller after its
+ * root element has been loaded.
+ */
 public class OfficeManagerTicketsController implements Initializable {
     private Connection connection;
     private ResultSet rs;
@@ -198,8 +204,6 @@ public class OfficeManagerTicketsController implements Initializable {
      *
      * Attempts to connect to a MySQL database using the JDBC driver and the provided credentials.
      * The connection object is stored in the instance variable 'connection'.
-     * @throws ClassNotFoundException if the JDBC driver class cannot be found
-     * @throws Exception if there is an error with the SQL syntax or connection
      */
     public void connectToDatabase() {
         try {

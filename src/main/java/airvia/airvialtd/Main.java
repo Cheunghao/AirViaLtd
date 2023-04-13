@@ -6,7 +6,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * The Main class is the entry point for a JavaFX application.
+ * It extends the Application class and provides the start method that initializes the application UI and starts the event loop.
+ */
 public class Main extends Application {
     /**
      * Starts the JavaFX application by loading the Login.fxml file and displaying it in a new stage.

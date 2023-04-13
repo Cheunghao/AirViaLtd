@@ -10,7 +10,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * The OfficeManagerSettingSecurityController class is the controller class for the Office Manager Security Settings UI.
+ */
 public class OfficeManagerSettingSecurityController {
     private Stage stage;
     private Scene scene;

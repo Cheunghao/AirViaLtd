@@ -4,32 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="reports">
+    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="javadoc">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/AddTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/AddTicketsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Blanks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Blanks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateBlankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateBlankController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateReportTravelAdvisorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateReportTravelAdvisorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateReportTravelAgencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateReportTravelAgencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Customers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/MySQLConnection.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerBlanksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerBlanksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerHomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerReportsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerReportsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerSettingGeneralController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerSettingGeneralController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerSettingSecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerSettingSecurityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerSettingUpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerSettingUpdateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerTicketsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Tickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Tickets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Reports.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorCustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorCustomersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorSettingGeneralController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorSettingGeneralController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorSettingSecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorSettingSecurityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorSettingUpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorSettingUpdateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorTicketsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisorSettingSecurity.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisorSettingSecurity.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +42,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -81,25 +78,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cheunghao/IdeaProjects/AirViaLtd/src/main/resources/airvia/airvialtd&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;SQL Dialects&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "C:/Users/cheunghao/IdeaProjects/AirViaLtd/src/main/resources/airvia/airvialtd",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Subversion",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cheunghao\IdeaProjects\AirViaLtd\src\main\resources\airvia\airvialtd" />
@@ -109,6 +106,9 @@
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\cheunghao\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="" />
@@ -217,6 +217,34 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />

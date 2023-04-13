@@ -15,7 +15,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Objects;
-
+/**
+ * The LoginController class handles user authentication and login functionality.
+ * It provides methods for validating user credentials.
+ */
 public class LoginController {
 
     private Stage stage;
@@ -101,8 +104,6 @@ public class LoginController {
      *
      * Attempts to connect to a MySQL database using the JDBC driver and the provided credentials.
      * The connection object is stored in the instance variable 'connection'.
-     * @throws ClassNotFoundException if the JDBC driver class cannot be found
-     * @throws Exception if there is an error with the SQL syntax or connection
      */
     public void connectToDatabase() {
         try {

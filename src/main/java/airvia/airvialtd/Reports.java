@@ -1,7 +1,10 @@
 package airvia.airvialtd;
 
+/**
+ * The Reports class provides methods for generating reports
+ * Retrieve the necessary data and formats it into a report format.
+ */
 public class Reports {
-
     public Reports(Integer reportID, String paymentType, String flightType, Float commissionRate, Float saleTotal, Integer currencyID, Integer travelAdvisorID, Integer ticketID) {
         this.reportID = reportID;
         this.currencyID = currencyID;

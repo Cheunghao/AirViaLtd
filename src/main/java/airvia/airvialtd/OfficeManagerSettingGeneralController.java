@@ -10,7 +10,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * The OfficeManagerSettingGeneralController class is the controller class for the Office Manager General Settings UI.
+ */
 public class OfficeManagerSettingGeneralController {
     private Stage stage;
     private Scene scene;

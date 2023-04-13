@@ -1,5 +1,8 @@
 package airvia.airvialtd;
 
+/**
+ * The Blanks class represents the Blank Object
+ */
 public class Blanks {
 
     /**

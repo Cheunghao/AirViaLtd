@@ -10,7 +10,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * The OfficeManagerSettingUpdateController class is the controller class for the Office Manager Update Settings UI.
+ */
 public class OfficeManagerSettingUpdateController {
 
     private Stage stage;
