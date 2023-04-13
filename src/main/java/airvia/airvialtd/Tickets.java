@@ -82,7 +82,21 @@ public class Tickets {
     }
 
 
-    public Tickets(Integer ticketID, String validityStatus, String purchaseDate, String paymentType, Float paymentTotal, Integer currencyID, Integer blankID, String refundStatus) {
+    /**
+     * Creates a new Ticket object with the given parameters.
+     *
+     * @param ticketID        the ID of the ticket
+     * @param validityStatus  the validity status of the ticket
+     * @param purchaseDate    the purchase date of the ticket
+     * @param paymentType     the payment type of the ticket
+     * @param paymentTotal    the total payment amount of the ticket
+     * @param currencyID      the currency ID of the ticket
+     * @param blankID         the blank ID associated with the ticket
+     * @param refundStatus    the refund status of the ticket
+     */
+    public Tickets(Integer ticketID, String validityStatus, String purchaseDate, String paymentType,
+                   Float paymentTotal, Integer currencyID, Integer blankID, String refundStatus) {
+        // Initialize instance variables with the given parameters
         this.ticketID = ticketID;
         this.validityStatus = validityStatus;
         this.purchaseDate = purchaseDate;
@@ -92,6 +106,7 @@ public class Tickets {
         this.blankID = blankID;
         this.refundStatus = refundStatus;
     }
+
 
 
 

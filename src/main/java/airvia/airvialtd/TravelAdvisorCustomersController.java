@@ -76,20 +76,36 @@ public class TravelAdvisorCustomersController implements Initializable {
 
     }
 
+    /**
+     * This method handles the action when the "searchButton" is clicked.
+     * It calls the "displayTable" method to display the table to the user.
+     *
+     * @param event the action event when the "searchButton" is clicked
+     */
     @FXML
     void searchButtonClick(ActionEvent event) {
+        // Call the "displayTable" method to display the table to the user
         displayTable();
-
     }
 
+
+    /**
+     * This method displays the customer information in the table based on the search query.
+     * It retrieves the search query from the "searchTextField" and executes a SQL statement
+     * to retrieve the customer information from the database. The information is then added
+     * to an ObservableList of Customers and displayed in the table.
+     */
     public void displayTable() {
+        // Create an ObservableList of Customers to store the retrieved customer information
         ObservableList<Customers> customerList = FXCollections.observableArrayList();
 
         try {
+            // Execute a SQL statement to retrieve the customer information based on the search query
             PreparedStatement pst = connection.prepareStatement("select * from Customer where customer_id like '%" + searchTextField.getText() + "%'");
             rs = pst.executeQuery();
-            while(rs.next()) {
 
+            // Iterate through the retrieved result set and add the customer information to the ObservableList
+            while(rs.next()) {
                 Integer customerID = rs.getInt("customer_id");
                 String firstName= rs.getString("customer_F_name");
                 String surname = rs.getString("customer_L_name");
@@ -104,24 +120,43 @@ public class TravelAdvisorCustomersController implements Initializable {
             System.out.println("Error");
             e.printStackTrace();
         }
+
+        // Set the customer information in the ObservableList to the customerTable and display it in the table
         customerTable.setItems(customerList);
     }
 
+
+    /**
+     *
+     * Attempts to connect to a MySQL database using the JDBC driver and the provided credentials.
+     * The connection object is stored in the instance variable 'connection'.
+     * @throws ClassNotFoundException if the JDBC driver class cannot be found
+     * @throws Exception if there is an error with the SQL syntax or connection
+     */
     public void connectToDatabase() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://smcse-stuproj00.city.ac.uk/in2018g22", "in2018g22_a", "dM8Sf9EB");
-            System.out.println("Connected");
+            Class.forName("com.mysql.cj.jdbc.Driver"); // Load the MySQL JDBC driver class
+            connection = DriverManager.getConnection("jdbc:mysql://smcse-stuproj00.city.ac.uk/in2018g22", "in2018g22_a", "dM8Sf9EB"); // Attempt to establish a connection to MySQL database
         } catch (Exception e) {
-            System.out.println("connection error");
             e.printStackTrace();
         }
     }
 
+    /**
+     * This method is called when the FXML file is loaded and initializes the GUI elements.
+     * It calls the "connectToDatabase" method to establish a connection to the database.
+     * It also sets up the columns in the customerTable and associates them with the appropriate
+     * properties in the Customers class.
+     *
+     * @param url the URL location of the FXML file
+     * @param resourceBundle the resource bundle associated with the FXML file
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        // Establish a connection to the database
         connectToDatabase();
 
+        // Set up the columns in the customerTable and associate them with the appropriate properties in the Customers class
         colCustomerID.setCellValueFactory(new PropertyValueFactory<>("customerID"));
         customerTable.getColumns().add(colCustomerID);
         colFirstName.setCellValueFactory(new PropertyValueFactory<>("firstName"));
@@ -137,4 +172,5 @@ public class TravelAdvisorCustomersController implements Initializable {
         colTicketID.setCellValueFactory(new PropertyValueFactory<>("ticketID"));
         customerTable.getColumns().add(colTicketID);
     }
+
 }

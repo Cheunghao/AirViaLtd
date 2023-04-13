@@ -20,7 +20,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
-
 public class OfficeManagerReportsController implements Initializable {
     private Connection connection;
     private Stage stage;
@@ -69,6 +68,12 @@ public class OfficeManagerReportsController implements Initializable {
 
     @FXML
     private Label totalReportsLabel;
+    /**
+     * Handles the click event for the create report button by loading the CreateReportTravelAdvisor.fxml file and setting the stage's scene to it.
+     *
+     * @param event The event triggered by clicking the create report button.
+     * @throws IOException If an error occurs while loading the CreateReportTravelAdvisor.fxml file.
+     */
     @FXML
     void createReportButtonClick(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Main.class.getResource("CreateReportTravelAdvisor.fxml"));
@@ -76,9 +81,15 @@ public class OfficeManagerReportsController implements Initializable {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
     }
 
+
+    /**
+     * Handles the click event for the back button by loading the OfficeManager.fxml file and setting the stage's scene to it.
+     *
+     * @param event The event triggered by clicking the back button.
+     * @throws IOException If an error occurs while loading the OfficeManager.fxml file.
+     */
     @FXML
     void backButtonClick(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Main.class.getResource("OfficeManager.fxml"));
@@ -86,20 +97,26 @@ public class OfficeManagerReportsController implements Initializable {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
     }
 
     @FXML
-    void removeBlankButtonClick(ActionEvent event) {
-
+    void removeReportButtonClick(ActionEvent event) {
     }
 
+    /**
+     * Handles the click event for the search button by calling the displayTable method to display the search results in a table.
+     *
+     * @param event The event triggered by clicking the search button.
+     */
     @FXML
     void searchButtonClick(ActionEvent event) {
         displayTable();
-
     }
 
+
+    /**
+     * Queries the SaleInfo table in the database for sale information that matches the search criteria and populates a TableView with the results.
+     */
     public void displayTable() {
         ObservableList<Reports> reportList = FXCollections.observableArrayList();
 
@@ -125,6 +142,9 @@ public class OfficeManagerReportsController implements Initializable {
         reportTable.setItems(reportList);
     }
 
+    /**
+     * Establishes a connection to the database.
+     */
     public void connectToDatabase() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -135,6 +155,7 @@ public class OfficeManagerReportsController implements Initializable {
             e.printStackTrace();
         }
     }
+
 
     public void initialize(URL url, ResourceBundle rb) {
         System.out.println("connect");

@@ -105,15 +105,24 @@ public class TravelAdvisorTicketsController implements Initializable {
 
     }
 
+    /**
+     * Populates and displays the ticket table with data from the Ticket table in the database.
+     * The data displayed is filtered by the search text entered in the search text field.
+     * If no search text is entered, all data from the Ticket table is displayed.
+     */
     public void displayTable() {
+        // Create an ObservableList to store the Tickets data to be displayed in the table
         ObservableList<Tickets> ticketList = FXCollections.observableArrayList();
 
-
-
         try {
+            // Prepare the SQL statement to retrieve the ticket data from the database
             PreparedStatement pst = connection.prepareStatement("select * from Ticket where ticket_ID like '%" + searchTextField.getText() + "%'");
+            // Execute the SQL statement and store the result set in the 'rs' variable
             rs = pst.executeQuery();
+
+            // Iterate through each row in the result set
             while(rs.next()) {
+                // Retrieve the ticket data from each column in the row
                 Integer ticketID = rs.getInt("ticket_ID");
                 String valid = rs.getString("validity_status");
                 java.sql.Timestamp timestamp = rs.getTimestamp("purchase_date");
@@ -125,56 +134,77 @@ public class TravelAdvisorTicketsController implements Initializable {
                 Integer blankID = rs.getInt("blank_id");
                 String refundStatus = rs.getString("refund_status");
 
+                // Create a new Tickets object with the retrieved data and add it to the ticketList
                 ticketList.add(new Tickets(ticketID, valid, formattedDate, paymentType, paymentTotal, currencyID, blankID, refundStatus));
             }
         } catch (Exception e) {
-            System.out.println("Error");
             e.printStackTrace();
         }
+
+        // Set the ticketList as the items to be displayed in the ticketTable
         ticketTable.setItems(ticketList);
     }
 
-    public void connectToDatabase() {
 
+    /**
+     *
+     * Attempts to connect to a MySQL database using the JDBC driver and the provided credentials.
+     * The connection object is stored in the instance variable 'connection'.
+     * @throws ClassNotFoundException if the JDBC driver class cannot be found
+     * @throws Exception if there is an error with the SQL syntax or connection
+     */
+    public void connectToDatabase() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://smcse-stuproj00.city.ac.uk/in2018g22", "in2018g22_a", "dM8Sf9EB");
-            System.out.println("Connected");
+            Class.forName("com.mysql.cj.jdbc.Driver"); // Load the MySQL JDBC driver class
+            connection = DriverManager.getConnection("jdbc:mysql://smcse-stuproj00.city.ac.uk/in2018g22", "in2018g22_a", "dM8Sf9EB"); // Attempt to establish a connection to MySQL database
         } catch (Exception e) {
-            System.out.println("connection error");
             e.printStackTrace();
         }
     }
 
+    /**
+     * Handles the event when the search button is clicked.
+     * Connects to the database and displays the ticket table.
+     */
     @FXML
     void searchButtonClick(ActionEvent event) {
-        System.out.println("search clicked");
-        connectToDatabase();
-        displayTable();
+        connectToDatabase(); // Connect to the database
+        displayTable(); // Display the ticket table
     }
 
+    /**
+     * Retrieves the total number of tickets from the Ticket table in the database.
+     * @return A string representing the total number of tickets.
+     */
     public String getTotalTickets() {
         int total = 0;
         try {
+            // Prepare the SQL statement to retrieve all ticket data from the database
             PreparedStatement pst = connection.prepareStatement("select * from Ticket");
+            // Execute the SQL statement and store the result set in the 'rs' variable
             rs = pst.executeQuery();
 
+            // Iterate through each row in the result set and increment the total counter
             while (rs.next()) {
-                System.out.println("something");
                 total++;
             }
         } catch (Exception e) {
-            System.out.println("total ticket error");
             e.printStackTrace();
         }
         System.out.println(total);
         return String.valueOf(total);
     }
 
+    /**
+     * Initializes the ticket table and sets up the columns with their respective cell values.
+     * Connects to the database and retrieves the total number of tickets, and sets it as the totalTicketsLabel text.
+     * @param url The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param rb The resources used to localize the root object, or null if the root object was not localized.
+     */
     public void initialize(URL url, ResourceBundle rb) {
-        System.out.println("connect");
-        connectToDatabase();
+        connectToDatabase(); // Connect to the database
 
+        // Set up the table columns with their respective cell values
         colTicketID.setCellValueFactory(new PropertyValueFactory<>("ticketID"));
         ticketTable.getColumns().add(colTicketID);
         colValidityStatus.setCellValueFactory(new PropertyValueFactory<>("validityStatus"));
@@ -192,8 +222,9 @@ public class TravelAdvisorTicketsController implements Initializable {
         colRefundStatus.setCellValueFactory(new PropertyValueFactory<>("refundStatus"));
         ticketTable.getColumns().add(colRefundStatus);
 
-
+        // Set the total number of tickets as the totalTicketsLabel text
         totalTicketsLabel.setText(getTotalTickets());
     }
+
 
 }

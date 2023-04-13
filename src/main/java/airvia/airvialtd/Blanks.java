@@ -2,7 +2,20 @@ package airvia.airvialtd;
 
 public class Blanks {
 
-    public Blanks(Integer blankID, Integer blankType, Integer blankNumber, String airlineName, Integer auditorsCoupons, Integer flightCoupon, Integer travelAdvisorID, Integer sysadminID) {
+    /**
+     * Constructor for the Blanks class.
+     *
+     * @param blankID           The ID of the blank.
+     * @param blankType         The type of the blank.
+     * @param blankNumber       The number of the blank.
+     * @param airlineName       The name of the airline.
+     * @param auditorsCoupons   The number of auditor's coupons.
+     * @param flightCoupon      The number of flight coupons.
+     * @param travelAdvisorID   The ID of the travel advisor.
+     * @param sysadminID        The ID of the sysadmin.
+     */
+    public Blanks(Integer blankID, Integer blankType, Long blankNumber, String airlineName,
+                  Integer auditorsCoupons, Integer flightCoupon, Integer travelAdvisorID, Integer sysadminID) {
         this.blankID = blankID;
         this.blankType = blankType;
         this.blankNumber = blankNumber;
@@ -12,6 +25,7 @@ public class Blanks {
         this.sysadminID = sysadminID;
         this.airlineName = airlineName;
     }
+
 
     public Integer getBlankID() {
         return blankID;
@@ -29,11 +43,11 @@ public class Blanks {
         this.blankType = blankType;
     }
 
-    public Integer getBlankNumber() {
+    public Long getBlankNumber() {
         return blankNumber;
     }
 
-    public void setBlankNumber(Integer blankNumber) {
+    public void setBlankNumber(Long blankNumber) {
         this.blankNumber = blankNumber;
     }
 
@@ -77,6 +91,7 @@ public class Blanks {
         this.airlineName = airlineName;
     }
 
-    private Integer blankID, blankType, blankNumber, auditorsCoupons, flightCoupon, travelAdvisorID, sysadminID;
+    private Integer blankID, blankType, auditorsCoupons, flightCoupon, travelAdvisorID, sysadminID;
+    private Long blankNumber;
     private String airlineName;
 }
