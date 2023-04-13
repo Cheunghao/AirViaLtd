@@ -10,7 +10,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * This class represents the controller for the Travel Advisor Home view, which displays a welcome message and options for the travel advisor to manage bookings or view customer accounts.
+ */
 public class TravelAdvisorHomeController {
     private Stage stage;
     private Scene scene;

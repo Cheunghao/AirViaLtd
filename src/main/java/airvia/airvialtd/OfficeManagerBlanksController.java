@@ -53,7 +53,7 @@ public class OfficeManagerBlanksController implements Initializable {
     private TableColumn<Blanks, Integer> colBlankNumber = new TableColumn<>("Blank Number");
 
     @FXML
-    private TableColumn<Blanks, ?> colAirlineName = new TableColumn<>("Airline");
+    private TableColumn<Blanks, String> colAirlineName = new TableColumn<>("Airline");
 
     @FXML
     private TableColumn<Blanks, Integer> colAuditorsCoupons = new TableColumn<>("Auditors Coupon");
@@ -86,30 +86,48 @@ public class OfficeManagerBlanksController implements Initializable {
 
     }
 
+    /**
+     * Handles the action event triggered by the back button.
+     *
+     * @param event the action event triggered by the back button
+     * @throws IOException if an I/O error occurs while loading the FXML file
+     */
     @FXML
     void backButtonClick(ActionEvent event) throws IOException {
+        // Load the "OfficeManager" FXML file
         Parent root = FXMLLoader.load(Main.class.getResource("OfficeManager.fxml"));
+        // Get the current stage and set the scene to the loaded FXML file
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        // Show the stage with the loaded FXML file
         stage.show();
-
     }
 
+
+    /**
+     * Handles the action event triggered by the create blank button.
+     *
+     * @param event the action event triggered by the create blank button
+     * @throws IOException if an I/O error occurs while loading the FXML file
+     */
     @FXML
     void createBlankClick(ActionEvent event) throws IOException {
         try {
-            System.out.println("buttonclick");
-
+            // Load the "CreateBlank" FXML file
             Parent root = FXMLLoader.load(Main.class.getResource("CreateBlank.fxml"));
+            // Create a new stage and set the scene to the loaded FXML file
             Stage newStage = new Stage();
             Scene newScene = new Scene(root);
             newStage.setScene(newScene);
+            // Show the new stage with the loaded FXML file
             newStage.show();
         } catch (Exception e) {
+            // Print the stack trace if an error occurs
             e.printStackTrace();
         }
     }
+
 
     /**
      * Handles the event when the user clicks the "Remove Blank" button. This method displays a confirmation dialog asking

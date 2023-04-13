@@ -7,10 +7,10 @@ import javafx.collections.ObservableList;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-
+/**
+ * This class represents a ticket in the system, which is used to book flights for customers.
+ */
 public class Tickets {
-
-
     private Integer ticketID, currencyID, blankID;
 
     private String validityStatus, purchaseDate, paymentType, refundStatus;

@@ -100,19 +100,23 @@ public class OfficeManagerTicketsController implements Initializable {
 
 
     /**
-     * This method handles the event when the back button is clicked and returns the user to the OfficeManager.fxml view.
+     * Handles the action event triggered by the back button.
      *
-     * @param event The event triggered by clicking the back button.
-     * @throws IOException If an input/output error occurs while loading the OfficeManager.fxml file.
+     * @param event the action event triggered by the back button
+     * @throws IOException if an I/O error occurs while loading the FXML file
      */
     @FXML
     void backButtonClick(ActionEvent event) throws IOException {
+        // Load the "OfficeManager" FXML file
         Parent root = FXMLLoader.load(Main.class.getResource("OfficeManager.fxml"));
+        // Get the current stage and set the scene to the loaded FXML file
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        // Show the stage with the loaded FXML file
         stage.show();
     }
+
 
 
     /**

@@ -6,10 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -37,7 +34,8 @@ public class LoginController {
     @FXML
     private TextField tfUsername;
 
-    Connection connection;
+    private Connection connection;
+    private boolean loggedIn;
 
     /**
      * Event handler for the login button that switches to the appropriate main menu based on the employee type.
@@ -47,6 +45,9 @@ public class LoginController {
      */
     @FXML
     void switchToMainMenu(ActionEvent event) throws IOException {
+
+
+
         /**
          * Retrieves the username and password entered in the login form and connects to the database.
          *
@@ -62,11 +63,16 @@ public class LoginController {
          * @param event the event triggered by clicking the login button
          * @throws IOException if an I/O error occurs while loading the FXML files for the different scenes
          */
-        try {PreparedStatement pst = connection.prepareStatement("select * from Employees"); // Create a prepared statement to query the "Employees" table
+
+
+        try {
+            PreparedStatement pst = connection.prepareStatement("select * from Employees"); // Create a prepared statement to query the "Employees" table
             ResultSet rs = pst.executeQuery(); // Execute the query and store the results in a ResultSet
 
             while (rs.next()) { // Iterate through each row of the ResultSet
                 if (Objects.equals(username, rs.getString("username")) && Objects.equals(password, rs.getString("password"))) { // Check if the current row's username and password match the provided username and password
+                    loggedIn = true;
+
                     switch (rs.getString("employee_type")) { // Switch statement based on employee type retrieved from the database
                         case "Office Manager": // If employee type is Office Manager
                             root = FXMLLoader.load(Main.class.getResource("OfficeManager.fxml")); // Load OfficeManager.fxml
@@ -89,11 +95,19 @@ public class LoginController {
                             stage.setScene(scene);
                             stage.show();
                             break;
-                        default: // If employee type is none of the above
+                        default:
+                            loggedIn = false;// If employee type is none of the above
                     }
-
-
                 }
+            }
+            if (!loggedIn) {
+                System.out.println("no login");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Login Error");
+                alert.setHeaderText("Incorrect username or password");
+                alert.setContentText("Please enter the correct username and password.");
+
+                alert.showAndWait();
             }
         } catch (Exception e) {
             System.out.println("failed sql");

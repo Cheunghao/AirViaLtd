@@ -29,7 +29,7 @@
             <Font name="Comic Sans MS" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="stockButton" layoutX="45.0" layoutY="187.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#stockButtonClick" text="Stock" AnchorPane.leftAnchor="50.0">
+      <Button fx:id="blankButton" layoutX="45.0" layoutY="187.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#blankButtonClick" text="Blank" AnchorPane.leftAnchor="50.0">
          <font>
             <Font name="Comic Sans MS" size="24.0" />
          </font>
@@ -42,6 +42,11 @@
       <Button fx:id="reportButton" layoutX="164.0" layoutY="187.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#reportButtonClick" text="Report">
          <font>
             <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="logOutButton" layoutX="34.0" layoutY="362.0" mnemonicParsing="false" onAction="#logOutButtonClick" text="Log out" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Button>
    </children>

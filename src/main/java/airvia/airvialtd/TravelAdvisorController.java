@@ -10,7 +10,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * This class represents the controller for the Travel Advisor view, which allows the travel advisor to manage bookings for customers.
+ */
 public class TravelAdvisorController {
 
     private Stage stage;
@@ -30,6 +32,30 @@ public class TravelAdvisorController {
 
     @FXML
     private Button ticketButton;
+
+    @FXML
+    private Button logOutButton;
+
+    /**
+     * Handles the action of the user clicking on the "Log Out" button, which logs the user out of the system and returns them to the login screen.
+     *
+     * @param event The action event representing the user's click on the "Log Out" button.
+     * @throws IOException If an error occurs while loading the Login.fxml file.
+     */
+    @FXML
+    void logOutButtonClick(ActionEvent event) throws IOException {
+        // Load the Login.fxml file into a Parent object
+        Parent root = FXMLLoader.load(Main.class.getResource("Login.fxml"));
+
+        // Get the stage from the event source and set its scene to the Login.fxml file
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+
+        // Show the stage
+        stage.show();
+    }
+
 
     /**
      * Loads the TravelAdvisorCustomers.fxml file and sets the stage to display the corresponding scene.

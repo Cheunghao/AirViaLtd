@@ -10,7 +10,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * This class represents the controller for the Travel Advisor General Settings view.
+ */
 public class TravelAdvisorSettingGeneralController {
     private Stage stage;
     private Scene scene;

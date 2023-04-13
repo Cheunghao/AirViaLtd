@@ -19,33 +19,23 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Objects;
 import java.util.ResourceBundle;
 /**
- * This class represents the controller for the Travel Advisor Customers view, which allows the travel advisor to view and manage customer accounts.
+ * Controller class for the OfficeManagerCustomers.fxml file.
+ * Handles interactions between the UI components and the back-end logic.
  */
-public class TravelAdvisorCustomersController implements Initializable {
-
+public class OfficeManagerCustomersController implements Initializable {
     private Connection connection;
     private ResultSet rs;
     private Stage stage;
     private Scene scene;
-
 
     @FXML
     private Button addClientButton;
 
     @FXML
     private Button backButton;
-
-    @FXML
-    private Button removeClientButton;
-
-    @FXML
-    private Button searchButton;
-
-    @FXML
-    private TextField searchTextField;
-
     @FXML
     private TableColumn<Customers, Integer> colCustomerID = new TableColumn<>("Customer ID");
     @FXML
@@ -65,6 +55,18 @@ public class TravelAdvisorCustomersController implements Initializable {
     private TableView<Customers> customerTable;
 
     @FXML
+    private Button removeClientButton;
+
+    @FXML
+    private Button searchButton;
+
+    @FXML
+    private TextField searchTextField;
+
+    @FXML
+    private Button toggleCustomerButton;
+
+    @FXML
     private Label totalClientsLabel;
 
     @FXML
@@ -80,8 +82,8 @@ public class TravelAdvisorCustomersController implements Initializable {
      */
     @FXML
     void backButtonClick(ActionEvent event) throws IOException {
-        // Load the "TravelAdvisor" FXML file
-        Parent root = FXMLLoader.load(Main.class.getResource("TravelAdvisor.fxml"));
+        // Load the "OfficeManager" FXML file
+        Parent root = FXMLLoader.load(Main.class.getResource("OfficeManager.fxml"));
         // Get the current stage and set the scene to the loaded FXML file
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -89,6 +91,7 @@ public class TravelAdvisorCustomersController implements Initializable {
         // Show the stage with the loaded FXML file
         stage.show();
     }
+
 
     @FXML
     void removeClientButtonClick(ActionEvent event) {
@@ -188,6 +191,38 @@ public class TravelAdvisorCustomersController implements Initializable {
         customerTable.getColumns().add(colValuedCustomer);
         colTicketID.setCellValueFactory(new PropertyValueFactory<>("ticketID"));
         customerTable.getColumns().add(colTicketID);
+    }
+
+
+    /**
+     * Handles the event when the "Toggle Customer" button is clicked.
+     * Retrieves the customer information based on the search query and toggles
+     * the customer's valued status between "yes" and "no".
+     * @param event the event that triggered the method call
+     */
+    @FXML
+    void toggleCustomerButtonClick(ActionEvent event) {
+        connectToDatabase();
+        String valued;
+        try {
+            // Execute a SQL statement to retrieve the customer information based on the search query
+            PreparedStatement pst = connection.prepareStatement("select * from Customer where customer_id = " + searchTextField.getText());
+            rs = pst.executeQuery();
+            rs.next();
+            System.out.println(rs.getString("valued_customer"));
+            if (Objects.equals(rs.getString("valued_customer"), "no")) {
+                valued = "yes";
+            } else {
+                valued = "no";
+            }
+            String updateSQL = "update Customer set valued_customer = '"+ valued + "' where customer_id = " + searchTextField.getText();
+
+            pst = connection.prepareStatement(updateSQL);
+            pst.execute();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

@@ -9,9 +9,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="javadoc 50%">
+    <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="idk final">
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerCustomersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminReportsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerCustomers.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/SysadminReports.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TwoFA.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateReportTravelAdvisorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateReportTravelAdvisorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateReportTravelAgencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateReportTravelAgencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerBlanksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerBlanksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerReportsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerReportsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerSettingSecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerSettingSecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerTicketsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/SysadminStockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Tickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/Tickets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorCustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorCustomersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/TravelAdvisorHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManager.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerReports.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerReports.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerSettingSecurity.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerSettingSecurity.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerTickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerTickets.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/Sysadmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/Sysadmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/TravelAdvisor.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +48,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -79,7 +106,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Subversion",
+    "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -113,6 +140,9 @@
       <workItem from="1681127377920" duration="603000" />
       <workItem from="1681144480522" duration="60904000" />
       <workItem from="1681347784675" duration="14273000" />
+      <workItem from="1681374019683" duration="111000" />
+      <workItem from="1681381451429" duration="616000" />
+      <workItem from="1681382098912" duration="15934000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1680724215592</created>
@@ -198,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681354635417</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="idk final">
+      <created>1681370200346</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681370200346</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +281,8 @@
     <MESSAGE value="login" />
     <MESSAGE value="a lot" />
     <MESSAGE value="reports" />
-    <option name="LAST_COMMIT_MESSAGE" value="reports" />
+    <MESSAGE value="idk final" />
+    <option name="LAST_COMMIT_MESSAGE" value="idk final" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

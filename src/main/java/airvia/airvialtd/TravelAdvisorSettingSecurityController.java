@@ -10,7 +10,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * This class represents the controller for the Travel Advisor Security Settings view, which allows the travel advisor to modify their account password.
+ */
 public class TravelAdvisorSettingSecurityController {
     private Stage stage;
     private Scene scene;

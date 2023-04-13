@@ -5,16 +5,32 @@ package airvia.airvialtd;
  * Retrieve the necessary data and formats it into a report format.
  */
 public class Reports {
-    public Reports(Integer reportID, String paymentType, String flightType, Float commissionRate, Float saleTotal, Integer currencyID, Integer travelAdvisorID, Integer ticketID) {
-        this.reportID = reportID;
-        this.currencyID = currencyID;
-        this.travelAdvisorID = travelAdvisorID;
-        this.ticketID = ticketID;
-        this.paymentType = paymentType;
-        this.flightType = flightType;
-        this.commissionRate = commissionRate;
-        this.saleTotal = saleTotal;
+    /**
+     * Constructs a new Reports object with the specified report ID, payment type, flight type, commission rate, sale total,
+     * currency ID, travel advisor ID, ticket ID, and card information.
+     *
+     * @param reportID the report ID
+     * @param paymentType the payment type
+     * @param flightType the flight type
+     * @param commissionRate the commission rate
+     * @param saleTotal the sale total
+     * @param currencyID the currency ID
+     * @param travelAdvisorID the travel advisor ID
+     * @param ticketID the ticket ID
+     * @param cardInfo the card information
+     */
+    public Reports(Integer reportID, String paymentType, String flightType, Float commissionRate, Float saleTotal, Integer currencyID, Integer travelAdvisorID, Integer ticketID, String cardInfo) {
+        this.reportID = reportID; // Set the report ID
+        this.currencyID = currencyID; // Set the currency ID
+        this.travelAdvisorID = travelAdvisorID; // Set the travel advisor ID
+        this.ticketID = ticketID; // Set the ticket ID
+        this.paymentType = paymentType; // Set the payment type
+        this.flightType = flightType; // Set the flight type
+        this.commissionRate = commissionRate; // Set the commission rate
+        this.saleTotal = saleTotal; // Set the sale total
+        this.cardInfo = cardInfo; // Set the card information
     }
+
 
     public Integer getReportID() {
         return reportID;
@@ -64,6 +80,14 @@ public class Reports {
         this.flightType = flightType;
     }
 
+    public String getCardInfo() {
+        return cardInfo;
+    }
+
+    public void setCardInfo(String cardInfo) {
+        this.cardInfo = cardInfo;
+    }
+
     public Float getCommissionRate() {
         return commissionRate;
     }
@@ -81,6 +105,6 @@ public class Reports {
     }
 
     private Integer reportID, currencyID, travelAdvisorID, ticketID;
-    private String paymentType, flightType;
+    private String paymentType, flightType, cardInfo;
     private Float commissionRate, saleTotal;
 }

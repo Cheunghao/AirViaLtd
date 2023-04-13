@@ -21,7 +21,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
-
+/**
+ * This class represents the controller for the Travel Advisor Tickets view, which displays a list of tickets that have been booked by customers.
+ */
 public class TravelAdvisorTicketsController implements Initializable {
 
 
@@ -80,6 +82,12 @@ public class TravelAdvisorTicketsController implements Initializable {
     @FXML
     private Button viewTransactionButton;
 
+    /**
+     * This method is called when the "Add Ticket" button is clicked in the Travel Advisor Tickets view. It loads the "Add Tickets" view in a new window.
+     *
+     * @param event The ActionEvent object that triggered the method call.
+     * @throws IOException If an error occurs while loading the "Add Tickets" view.
+     */
     @FXML
     void addTicketButton(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(Main.class.getResource("AddTickets.fxml"));
@@ -87,17 +95,25 @@ public class TravelAdvisorTicketsController implements Initializable {
         Scene newScene = new Scene(root);
         newStage.setScene(newScene);
         newStage.show();
-
     }
 
+
+    /**
+     * Handles the action event triggered by the back button.
+     *
+     * @param event the action event triggered by the back button
+     * @throws IOException if an I/O error occurs while loading the FXML file
+     */
     @FXML
     void backButtonClick(ActionEvent event) throws IOException {
+        // Load the "TravelAdvisor" FXML file
         Parent root = FXMLLoader.load(Main.class.getResource("TravelAdvisor.fxml"));
+        // Get the current stage and set the scene to the loaded FXML file
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        // Show the stage with the loaded FXML file
         stage.show();
-
     }
 
     @FXML
