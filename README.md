@@ -12,12 +12,12 @@ SQL
 Installation:
 
 Download and install the latest version of JavaFX from the official website: https://openjfx.io/
-Install a SQL database management system (such as MySQL, Oracle, or SQLite) if you haven't already.
+Install a SQL database management system (such as MySQL) if you haven't already.
 Download and install AirViaLtd.
 Run the program.
 
 Usage: 
 
 Launch the program.
-Login using your login and username.
+Login using your username and password.
 You will be able to read and write to any tables that you have permissions to.
