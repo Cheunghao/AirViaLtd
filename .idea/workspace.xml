@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1764f8b4-5a02-4b05-b72d-8d047675a402" name="Changes" comment="a lot">
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateReportTravelAdvisorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/CreateReportTravelAgencyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/CreateReportTravelAdvisor.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/CreateReportTravelAgency.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerReportsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airvia/airvialtd/OfficeManagerReportsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerBlanks.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airvia/airvialtd/OfficeManagerBlanks.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,25 +63,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "C:/Users/cheunghao/IdeaProjects/AirViaLtd/src/main/resources/airvia/airvialtd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "SQL Dialects",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cheunghao/IdeaProjects/AirViaLtd/src/main/resources/airvia/airvialtd&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;SQL Dialects&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cheunghao\IdeaProjects\AirViaLtd\src\main\resources\airvia\airvialtd" />
@@ -102,7 +107,8 @@
       <workItem from="1680891932960" duration="1073000" />
       <workItem from="1680893301626" duration="6716000" />
       <workItem from="1681127377920" duration="603000" />
-      <workItem from="1681144480522" duration="60041000" />
+      <workItem from="1681144480522" duration="60904000" />
+      <workItem from="1681347784675" duration="6677000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1680724215592</created>
@@ -174,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681337647851</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="a lot">
+      <created>1681342937356</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681342937356</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

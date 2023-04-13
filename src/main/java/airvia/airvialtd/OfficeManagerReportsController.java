@@ -70,7 +70,12 @@ public class OfficeManagerReportsController implements Initializable {
     @FXML
     private Label totalReportsLabel;
     @FXML
-    void createReportButtonClick(ActionEvent event) {
+    void createReportButtonClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource("CreateReportTravelAdvisor.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
